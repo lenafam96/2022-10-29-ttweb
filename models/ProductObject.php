@@ -116,7 +116,7 @@ class ProductObject
 
     public function getElement()
     {
-        return $this->element;
+        return str_replace("\n", "<br>", $this->element);
     }
 
     public function setElement($value)
@@ -126,7 +126,7 @@ class ProductObject
 
     public function getBenefit()
     {
-        return $this->benefit;
+        return str_replace("\n", "<br>", $this->benefit);
     }
 
     public function setBenefit($value)
