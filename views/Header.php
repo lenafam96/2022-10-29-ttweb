@@ -41,7 +41,7 @@ $user = isset($_SESSION['email']) ?  $_SESSION['email'] : [];
                     <!-- <li><a href="index.php?action=index_c">Quản lý loại sữa</a></li> -->
                     <!-- <li><a href="index.php?action=index_b">Quảng lý hãng sữa</a></li> -->
                     <li><a href="index.php?action=index">Quản lý sản phẩm</a></li>
-                    <!-- <li><a href="index.php?action=index_cu">Quản lý khách hàng</a></li> -->
+                    <li><a href="index.php?action=album">Album ảnh gia đình</a></li>
                     <!-- <li><a href="index.php?action=logout">Đăng xuất</a></li> -->
                 </ul>
             </li>
@@ -50,7 +50,7 @@ $user = isset($_SESSION['email']) ?  $_SESSION['email'] : [];
         <?php } ?>
     </a>
 </div>
-<nav id="navbar_top" class="navbar navbar-expand-sm navbar-dark" style="background-color: #333; z-index: 100;">
+<!-- <nav id="navbar_top" class="navbar navbar-expand-sm navbar-dark" style="background-color: #333; z-index: 100;">
     <div class="nav-container">
         <a class="navbar-brand" href="index.php">TRANG CHỦ</a>
         <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -64,4 +64,4 @@ $user = isset($_SESSION['email']) ?  $_SESSION['email'] : [];
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->

@@ -83,6 +83,25 @@ class Product
         return $arr;
     }
 
+    public function search($category=-1, $brand=-1, $keyword=''): array
+    {
+        $sql = "select products.*,category_name,brand_name from products
+        left join categories on products.category_id = categories.category_id
+        left join brands on products.brand_id = brands.brand_id
+        where products.category_id = $category and products.brand_id = $brand and products.product_name like '%$keyword%'";
+        $result = (new Connect())->excuteQuery($sql);
+
+        $arr = [];
+        if(!$result) return [];
+        foreach ($result as $each) {
+            $object = new ProductObject($each);
+
+            $arr[] = $object;
+        }
+
+        return $arr;
+    }
+
     public function create($params1, $params2): void
     {
         $object = new ProductObject($params1, $params2);

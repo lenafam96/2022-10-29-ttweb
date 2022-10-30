@@ -52,6 +52,21 @@ class ProductController
         (new Controller())->myHeader("index.php");
     }
 
+    public function search(): void
+    {
+        require_once 'models/Product.php';
+        require_once 'models/Category.php';
+        require_once 'models/Brand.php';
+        $categoryId = $_POST['category_id']??'';
+        $brandId = $_POST['brand_id']??'';
+        $productName = $_POST['product_name']??'';
+        $categories = (new Category())->all();
+        $brands = (new Brand())->all();
+        $arr = (new Product())->search($categoryId, $brandId, $productName);
+        $title = "Có ".count($arr)." sản phẩm được tìm thấy";
+        require 'views/product/search.php';
+    }
+
     public function check($action)
     {
         // if (isset($_SESSION['email']))

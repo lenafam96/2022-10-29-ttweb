@@ -9,7 +9,7 @@ require_once 'controllers/Controller.php';
 require_once 'controllers/Session.php';
 
 
-$action = $_GET['action'] ?? 'home';
+$action = $_GET['action'] ?? 'search';
 $category = $_GET['category'] ?? '';
 $brand = $_GET['brand'] ?? '';
 $sort = $_POST['sort'] ?? '';
@@ -56,7 +56,11 @@ switch ($action) {
     case 'edit':
     case 'update':
     case 'delete':
+    case 'search':
         (new ProductController())->check($action);
+        break;
+    case 'album':
+        (new HomeController())->album();
         break;
     default:
         (new Controller())->goError();

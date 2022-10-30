@@ -451,3 +451,17 @@ ul.dropdown-menu {
 #index-product-span {
     color: #b00c45;
 }
+
+th{
+    text-align: center;
+}
+
+.search-span{
+    color: #b00c45;
+}
+
+.search-product-title{
+    color: #da9516;
+    font-size: larger;
+    font-style: italic;
+}

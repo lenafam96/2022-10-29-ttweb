@@ -21,7 +21,7 @@
             <?php require_once 'views/Header.php'; ?>
         </header>
         <section class="body">
-            <aside><?php require_once 'views/Navbar.php'; ?></aside>
+            <aside><?php //require_once 'views/Navbar.php'; ?></aside>
             <article>
                 <?php
                 require_once 'route.php';

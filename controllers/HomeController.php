@@ -50,4 +50,9 @@ class HomeController
         unset($_SESSION['email']);
         (new Controller())->myHeader("index.php");
     }
+
+    public function album(): void
+    {
+        require 'views/album.php';
+    }
 }
